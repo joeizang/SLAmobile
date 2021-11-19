@@ -1,0 +1,12 @@
+version: "3"
+services:
+  pgdb:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: P@ssword1
+      POSTGRES_USER: postres
+      POSTGRES_DB: slabackenddb
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports:
+      - '5442:5432'
